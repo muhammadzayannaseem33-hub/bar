@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f0f0f7;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-decoration: none; /* Underline remove kare */
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50px; /* Rounded corners */
+    border: 3px solid #000; /* Black border for style */
+    box-shadow: 0 5px 0 #000; /* 3D effect */
+    transition: all 0.2s; /* Hover effect ke liye transition */
+    text-transform: lowercase; /* Agar aap 'about me' ko chota hi rakhna chahte hain */
+    font-family: Arial, sans-serif; /* Button ka font simple rakha hai */
+}
+.container {
+    max-width: 900px;
+    width: 100%;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* HEADER */
+.intro-card {
+    background: #e7d8ec;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.intro-card h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.intro-card p {
+    font-size: 1rem;
+}
+
+/* PHOTO */
+.photo-section, .photo-section-2 {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.photo-section img,
+.photo-section-2 img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ABOUT */
+.about {
+    background: #e8e1ef;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 12px;
+}
+
+.about h2 {
+    margin-bottom: 10px;
+}
+
+/* EXPERIENCE */
+.experience {
+    background: #f5e7ef;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.experience ul {
+    margin-left: 20px;
+}
+
+.experience li {
+    margin-bottom: 8px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .intro-card h1 {
+        font-size: 1.6rem;
+    }
+
+    .photo-section img,
+    .photo-section-2 img {
+        max-width: 100%;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}

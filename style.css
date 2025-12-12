@@ -1,0 +1,113 @@
+/* Importing a Google Font that is bold and rounded, similar to the image's font */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@700&display=swap');
+
+:root {
+    --primary-color: #ff9bee; /* Orange color for Barrrri and button */
+    --text-color: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.hero-section {
+    /* Background Image: Aapki nai image yahan set hogi. 
+       Make sure the image file name is correct and it's in the same folder. 
+       Maine filhaal iska naam 'new_background.jpg' rakha hai. */
+    background-image: url('IMG_6788.JPEG'); 
+    background-size: cover; /* Responsive aur poori screen par fit */
+    background-position: center; /* Image center mein rahe */
+    height: 100vh; /* Viewport height ke barabar height */
+    display: flex;
+    justify-content: center; /* Content ko horizontal center kare */
+    align-items: center; /* Content ko vertical center kare */
+    text-align: center;
+}
+
+.hero-content {
+    /* Content box ko thoda space denge takay background se alag lage */
+    padding: 20px;
+    
+    /* Agar content background ke saath mix ho raha ho toh yeh line add kar sakte hain: */
+    /* background-color: rgba(255, 255, 255, 0.5); */ 
+    /* border-radius: 10px; */
+}
+
+/* --- Main Heading: Barrrri --- */
+.main-title {
+    font-family: 'Fredoka', sans-serif; /* Similar font */
+    font-size: 8rem; /* Bada size */
+    color: var(--primary-color);
+    text-shadow: 
+        -4px -4px 0 #000, 
+        4px -4px 0 #000, 
+        -4px 4px 0 #000, 
+        4px 4px 0 #000; /* Orange ke peeche black outline/shadow, jaisa image mein hai */
+    
+    margin-bottom: 40px;
+    line-height: 1; /* Line height control */
+}
+
+/* --- CTA Button: about me --- */
+.cta-button {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-decoration: none; /* Underline remove kare */
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50px; /* Rounded corners */
+    border: 3px solid #000; /* Black border for style */
+    box-shadow: 0 5px 0 #000; /* 3D effect */
+    transition: all 0.2s; /* Hover effect ke liye transition */
+    text-transform: lowercase; /* Agar aap 'about me' ko chota hi rakhna chahte hain */
+    font-family: Arial, sans-serif; /* Button ka font simple rakha hai */
+}
+
+.cta-button:hover {
+    background-color: #eb63cd; /* Thoda light shade on hover */
+    transform: translateY(-2px); /* Button ko thoda upar uthaye */
+    box-shadow: 0 7px 0 #000;
+}
+
+.cta-button:active {
+    transform: translateY(3px); /* Click hone par thoda niche jaye */
+    box-shadow: 0 2px 0 #000;
+}
+
+/* --- Responsiveness: For all devices --- */
+@media (max-width: 1024px) {
+    /* Tablet view */
+    .main-title {
+        font-size: 6rem; /* Size thoda kam kiya */
+    }
+    .cta-button {
+        font-size: 1.3rem;
+        padding: 12px 30px;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Mobile view */
+    .main-title {
+        font-size: 4rem; /* Mazeed kam kiya */
+        text-shadow: 
+            -2px -2px 0 #000, 
+            2px -2px 0 #000, 
+            -2px 2px 0 #000, 
+            2px 2px 0 #000; /* Shadow bhi chota kiya */
+    }
+    .cta-button {
+        font-size: 1.1rem;
+        padding: 10px 25px;
+        margin-top: 10px;
+    }
+}
